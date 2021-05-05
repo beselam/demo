@@ -32,7 +32,7 @@ const storeUpload = async (file) => {
   const id = shortid.generate();
   let path = `src/uploads/${id}-${filename}`;
   await stream.pipe(createWriteStream(path));
-  path = `${URL}:${PORT}/${path}`;
+  path = `https://my-cat-server.jelastic.metropolia.fi/${path}`;
   return path;
 };
 
